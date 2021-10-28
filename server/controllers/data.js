@@ -13,9 +13,9 @@ export function data(req, res) {
   try {
     axios
       .post('http://ap3.stc.srv.br/integration/prod/ws/getClientVehicles', {
-        key: '154841bca3350b2a35dff52ecb070856',
-        user: 'MONTCARGAS',
-        pass: '623fdd700e25b227730d971f96e1e759',
+        key: '',
+        user: '',
+        pass: '',
       })
       .then((result) => {
         var data = result.data.data;
