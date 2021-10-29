@@ -53,12 +53,12 @@ export function data(req, res) {
 
 
           var hours = format(new Date(), 'HH:mm', { locale: ptBR });
-          var date = format(new Date(), 'dd-MM-yyyy-HH-mm', { locale: ptBR });
+          // var date = format(new Date(), 'dd-MM-yyyy-HH-mm', { locale: ptBR });
 
-          fs.writeFileSync(
-            `${path}/veiculos-${date}.txt`,
+          fs.writeFile(
+            `${path}/posições.txt`,
             typeObj,
-
+            {flag: 'a'},
             function (erro) {
               if (erro) {
                 throw erro;
