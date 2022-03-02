@@ -36,7 +36,7 @@ export function data(req, res) {
             let plateNumber = item.plate.substring(3)
 
             // primeira alteração para quebras de linha na string (opcional)
-            var dataString = `\n${item.date}${plateLetter}-${plateNumber}${item.latitude}${item.longitude}`;
+            var dataString = `\n${item.date}${plateLetter}-${plateNumber}${item.latitude}${item.longitude}\r`;
 
             objClient.push(dataString);
           });
